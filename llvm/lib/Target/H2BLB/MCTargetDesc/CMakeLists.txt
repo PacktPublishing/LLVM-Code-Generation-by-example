@@ -3,6 +3,8 @@ add_llvm_component_library(LLVMH2BLBDesc
 
   LINK_COMPONENTS
   Support
+  H2BLBInfo
+  MC
 
   ADD_TO_COMPONENT
   H2BLB
