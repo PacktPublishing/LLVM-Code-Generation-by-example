@@ -56,14 +56,19 @@ add_llvm_target(H2BLBCodeGen
   H2BLBDesc
   H2BLBInfo
 
+  Analysis
   AsmPrinter
   CodeGen
+  CodeGenTypes
   Core
   GlobalISel
+  MC
   Passes
   SelectionDAG
   Support
   Target
+  TargetParser
+  TransformUtils
 
   ADD_TO_COMPONENT
   H2BLB

@@ -7,6 +7,7 @@ add_llvm_component_library(LLVMH2BLBDesc
   H2BLBInstPrinter.cpp
 
   LINK_COMPONENTS
+  BinaryFormat
   Support
   H2BLBInfo
   MC
