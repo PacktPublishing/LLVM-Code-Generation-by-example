@@ -1,4 +1,4 @@
-This is the second repo for the book "How to Build an LLVM Backend".
+This is the second repo for the book "LLVM Code Generation".
 This will be linked to the main repo for this title.
 
 The purpose of this repository is to offer a step by step implementation of an LLVM backend from scratch.
@@ -10,6 +10,10 @@ the open source llvm-project.
 This repo also contains a `h2blb_utils` directory that contains a script that can be used to reset the tags
 referenced in the book so that they point to the relevant commits after an LLVM rebase for instance.
 
+Note: This repository is aggressively rebased (force-push) to keep an easy-to-follow commit
+history for the H2BLB backend (the backend built in the LLVM Code Generation book).
+In other words, if you want a stable version of LLVM use the [official LLVM repository](https://github.com/llvm/llvm-project),
+not this repository!
 
 Below follows the original README.md
 
