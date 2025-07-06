@@ -69,6 +69,7 @@ llvm::Triple::ArchType darwin::getArchTypeForMachOArchName(StringRef Str) {
       .Case("nvptx64", llvm::Triple::nvptx64)
       .Case("amdil", llvm::Triple::amdil)
       .Case("spir", llvm::Triple::spir)
+      .Case("h2blb", llvm::Triple::h2blb)
       .Default(llvm::Triple::UnknownArch);
 }
 
