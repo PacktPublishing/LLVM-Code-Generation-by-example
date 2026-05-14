@@ -65,7 +65,7 @@ namespace {
 
 struct H2BLBIncomingValueAssigner : public CallLowering::IncomingValueAssigner {
   H2BLBIncomingValueAssigner(CCAssignFn *AssignFn_, CCAssignFn *AssignFnVarArg_,
-                             const H2BLBSubtarget &Subtarget_, bool IsReturn)
+                             bool IsReturn)
       : IncomingValueAssigner(AssignFn_, AssignFnVarArg_) {}
 
   bool assignArg(unsigned ValNo, EVT OrigVT, MVT ValVT, MVT LocVT,
@@ -341,7 +341,7 @@ bool H2BLBCallLowering::lowerFormalArguments(MachineIRBuilder &MIRBuilder,
 
   CCAssignFn *AssignFn = CC_H2BLB_Common;
 
-  CallLowering::IncomingValueAssigner Assigner(AssignFn, AssignFn);
+  H2BLBIncomingValueAssigner Assigner(AssignFn, AssignFn, /*IsReturn*/ false);
   FormalArgHandler Handler(MIRBuilder, MRI);
   SmallVector<CCValAssign, 16> ArgLocs;
   CCState CCInfo(F.getCallingConv(), F.isVarArg(), MF, ArgLocs, F.getContext());
